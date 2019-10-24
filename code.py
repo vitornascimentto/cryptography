@@ -9,3 +9,6 @@ token = f.encrypt(b'%s'%password)
 
 key = key.decode('utf-8')
 token = token.decode('utf-8')
+
+with open('{}.txt'.format(description), 'w') as data:
+    data.write(f'{token}\n{key}')
